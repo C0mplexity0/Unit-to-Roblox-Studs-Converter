@@ -1,0 +1,153 @@
+:root {
+    --primary-background: rgb(20, 20, 20);
+    --secondary-background: rgb(28, 28, 28);
+
+    --primary-element-background: rgb(24, 24, 24);
+    --primary-element-active-background: rgb(26, 26, 26);
+
+
+    --primary-border-color: rgb(25, 25, 25);
+
+    --primary-element-border-color: rgb(29, 29, 29);
+
+
+    --primary-color: #fff;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--primary-background);
+    color: var(--primary-color);
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px;
+    margin-bottom: 0px;
+    width: calc(100% - 40px);
+    display: inline-block;
+}
+
+h2 {
+    text-align: center;
+}
+
+/* w3schools.com still useful as ever (https://www.w3schools.com/howto/howto_custom_select.asp) */
+
+.custom-select {
+    position: relative;
+    font-family: Arial;
+}
+
+.custom-select select {
+    display: none;
+}
+
+.select-selected {
+    background: var(--primary-element-background);
+    border-radius: 10px;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "";
+    top: 14px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 6px solid transparent;
+    border-color: var(--primary-color) transparent transparent transparent;
+}
+
+.select-selected.select-arrow-active:after {
+    border-color: transparent transparent var(--primary-color) transparent;
+    top: 7px;
+}
+
+.select-items div,.select-selected {
+    color: var(--primary-color);
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent var(--primary-element-border-color) transparent;
+    cursor: pointer;
+}
+
+.select-items {
+    position: absolute;
+    background-color: var(--primary-element-background);
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+    background-color: var(--primary-element-active-background);
+}
+
+input[type="number"] {
+    background-color: var(--primary-element-background);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+
+    padding: 10px 15px;
+
+    width: 170px;
+
+    color: var(--primary-color);
+}
+
+.tool-box {
+    max-width: calc(100% - 40px);
+    max-height: calc(100% - 108px);
+    width: 100%;
+    aspect-ratio: 2 / 1;
+    display: flex;
+
+    margin: 20px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary-background);
+
+    border-radius: 20px;
+}
+
+.convert-option {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+
+    position: relative;
+}
+
+.convert-form,
+.result-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.result-container h2 {
+    margin: 0px;
+}
+
+.result-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
