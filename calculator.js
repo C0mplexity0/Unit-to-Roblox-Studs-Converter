@@ -9,6 +9,7 @@ const conversions = {
     "centimetres": 0.25/7,
     "millimetres": 0.025/7,
     "miles": 1/0.000173984,
+    "yards": 1/0.306212,
     "feet": 1/0.918635,
     "inches": 1/11.0236,
 }; // (e.g. metres = 25/7, so 1 metre = 25/7 studs)

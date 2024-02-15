@@ -8,5 +8,6 @@ Ever needed to create something at a perfect 1:1 scale in Roblox but don't know 
 - Centimetres
 - Millimetres
 - Miles
+- Yards
 - Feet
 - Inches
